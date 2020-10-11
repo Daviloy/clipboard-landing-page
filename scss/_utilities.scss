@@ -1,0 +1,69 @@
+@mixin buttons($color) {
+    background-color: $color;
+    box-shadow: 0.5px 0.5px 10px 1px $color;
+}
+
+.container {
+    margin: auto;
+    max-width: 1440px;
+    padding: 0 130px;
+}
+
+.btn {
+    border: none;
+    border-radius: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 5px;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    transition: 0.3s ease-in;
+    width: 200px;
+
+    &-primary {
+        @include buttons($strong-blue);
+
+        &:hover {
+            background-color: hsl(171, 66%, 52%);
+        }
+    }
+
+    &-secondary {
+        @include buttons($light-blue);
+
+        &:hover {
+            background-color: hsl(233, 100%, 77%);
+        }
+    }
+}
+
+.button-group {
+    margin-top: 45px;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 880px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 470px) {
+    .btn {
+        display: block;
+        width: 100%;
+    }
+
+    .button-group {
+        .btn:nth-child(2) {
+            margin-top: 25px;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+$strong-blue: hsl(171, 66%, 44%);
+$light-blue: hsl(233, 100%, 69%);
+$dark-grayish-blue: hsl(210, 10%, 33%);
+$grayish-blue: hsl(201, 11%, 66%);
+$container-width: 1440px;
+$text-size: 18px;
+
+// Bai Jamjuree Regular
+@font-face {
+    font-family: "Bai Jamjuree";
+    font-weight: 400;
+    src: url("../fonts/BaiJamjuree-Regular.ttf");
+}
+
+// Bai Jamjuree Bold
+@font-face {
+    font-family: "Bai Jamjuree Bold";
+    font-weight: 600;
+    src: url("../fonts/BaiJamjuree-Bold.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: $grayish-blue;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: $text-size;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dark-grayish-blue;
+    font-family: "Bai Jamjuree Bold";
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 33px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+p {
+    margin: 0.75rem 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: $dark-grayish-blue;
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 660px) {
+    h1 {
+        // Reduce the headings
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}

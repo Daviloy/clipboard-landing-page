@@ -1,0 +1,37 @@
+@import "base";
+@import "utilities";
+@import "header";
+@import "features";
+@import "cta";
+@import "footer";
+
+#clients {
+    margin-top: 130px;
+
+    .clients-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 950px) {
+    #clients {
+        .clients-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            gap: 50px;
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #clients {
+        .clients-content {
+            grid-template-columns: 1fr;
+            gap: 80px;
+        }
+    }
+}
